@@ -1,0 +1,18 @@
+{
+  "name": "gmc-monitor",
+  "version": "1.0.0",
+  "description": "Monitors Google Merchant Center for 'product page unavailable' errors and auto-requests a website review",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.0.0",
+    "nodemailer": "^6.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
