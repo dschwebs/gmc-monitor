@@ -3,7 +3,7 @@ name: GMC Monitor — Product Page Unavailable
 on:
   schedule:
     # Runs every hour at :00
-    - cron: '0 * * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     # Allows manual trigger from GitHub Actions UI
 
