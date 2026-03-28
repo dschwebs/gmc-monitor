@@ -1,7 +1,7 @@
 const { GoogleAuth } = require('google-auth-library');
 
 const MERCHANT_ID     = '6278355';
-const DEVELOPER_EMAIL = 'alliedsafeandvaultco@gmail.com';
+const DEVELOPER_EMAIL = 'dschwebs@safeandvaultstore.com';
 
 async function register() {
   console.log('Authenticating with service account...');
