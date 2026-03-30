@@ -1,17 +1,17 @@
-name: GMC Monitor — Product Page Unavailable
+name: GMC Daily Morning Report
 
 on:
   schedule:
-    # Runs every hour at :00
-    - cron: '0 */6 * * *'
+    # Runs every day at 7:00 AM Pacific (15:00 UTC)
+    - cron: '0 15 * * *'
   workflow_dispatch:
     # Allows manual trigger from GitHub Actions UI
 
 jobs:
-  monitor:
-    name: Check & Fix GMC Product Page Errors
+  report:
+    name: Send GMC Daily Report
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run GMC Monitor
+      - name: Run GMC Daily Report
         env:
           MERCHANT_ID: ${{ secrets.MERCHANT_ID }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
